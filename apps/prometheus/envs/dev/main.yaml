@@ -8,6 +8,7 @@ spec:
     - list:
         elements:
           - cluster: "in-cluster"
+  project: monitoring
   template:
     metadata:
       name: prometheus
@@ -30,12 +31,12 @@ spec:
          targetRevision: HEAD
          ref: values
 
-      destination:
-        server: https://kubernetes.default.svc
-        namespace: monitoring
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
-        syncOptions:
-        - CreateNamespace=true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: monitoring
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+  syncOptions:
+    - CreateNamespace=true
