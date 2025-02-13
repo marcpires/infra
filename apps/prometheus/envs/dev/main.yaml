@@ -13,7 +13,7 @@ spec:
       name: prometheus
     spec:
       project: monitoring
-      source:
+      sources:
        - repoURL: https://prometheus-community.github.io/helm-charts
          targetRevision: HEAD 
          # Not good pratice to point to a branch, treats the CRD as a mutable resource
