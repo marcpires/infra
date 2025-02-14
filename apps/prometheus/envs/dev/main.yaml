@@ -7,7 +7,7 @@ spec:
   project: monitoring
   sources:
   - repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: HEAD 
+    targetRevision: 'HEAD' 
          # Not good pratice to point to a branch, treats the CRD as a mutable resource
     chart: kube-prometheus-stack
     helm:
@@ -19,7 +19,7 @@ spec:
       valueFiles:
       - $values/charts/prometheus/values-dev.yaml
   - repoURL: 'https://github.com/marcpires/charts.git'
-    targetRevision: chore/initial-charts
+    targetRevision: 'chore/initial-charts'
     ref: values
 
   destination:
