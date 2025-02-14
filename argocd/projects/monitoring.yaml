@@ -10,7 +10,13 @@ spec:
   description: "Observability tools"
   # Allow manifests to deploy from any Git repos
   sourceRepos:
-  - 'https://github.com/lhc/infra.git'
+  - '*'
   destinations:
   - namespace: monitoring
     server: https://kubernetes.default.svc
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
