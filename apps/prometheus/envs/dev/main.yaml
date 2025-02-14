@@ -7,7 +7,7 @@ spec:
   project: monitoring
   sources:
   - repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: main
+    targetRevision: 69.2.4
          # Not good pratice to point to a branch, treats the CRD as a mutable resource
     chart: kube-prometheus-stack
     helm:
