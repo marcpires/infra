@@ -19,7 +19,7 @@ spec:
       valueFiles:
       - $values/charts/prometheus/values-dev.yaml
   - repoURL: 'https://github.com/marcpires/charts.git'
-    targetRevision: v0.1.0
+    targetRevision: v0.1.1
     ref: values
 
   destination:
